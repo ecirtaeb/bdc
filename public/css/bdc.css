@@ -22,6 +22,14 @@ html {
 	justify-content : space-between;
 }
 
+.flexInfoClient {
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : row;
+	justify-content : flex-end;
+}
+
+
 body {
 	color : black;
 	font-family : "Open-sans", "serif";
@@ -65,7 +73,6 @@ tbody tr:nth-child(odd) {
 }
 
 
-
 /***************
     ACCUEIL
 ***************/
@@ -93,6 +100,11 @@ table#bdc tfoot td {
    DETAIL COMMANDE
 *******************/
 
+.adrClient {
+	width : 30%;
+	text-align : left;
+}
+
 table#bdc {
 	width : 80%;
 	margin : 0 auto;
@@ -101,6 +113,5 @@ table#bdc {
 
 }
 section#infoClient {
-	width : 30%;
 	text-align : right;
 }

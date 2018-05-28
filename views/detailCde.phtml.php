@@ -3,12 +3,14 @@
 		<?php 
 			$customer=getCustomerById($idCli);
 		?> 
-		<section id="infoClient" class="flex">
-			<h2><?=$customer['customerName']?></h2>
-			<h3><?=$customer['contactFirstName']?> <?=$customer['contactLastName']?></h2>
-			<p><?=$customer['addressLine1']?></p>
-			<p><?=$customer['city']?></p>
-		</section>
+
+			<section id="infoClient" class="flexInfoClient">
+				<h2 class="adrClient"><?=$customer['customerName']?></h2>
+				<h3 class="adrClient"><?=$customer['contactFirstName']?> <?=$customer['contactLastName']?></h2>
+				<p class="adrClient"><?=$customer['addressLine1']?></p>
+				<p class="adrClient"><?=$customer['city']?></p>
+			</section>
+
 		<section>
 			<table id="bdc">		
 			<caption>Bon de commande n°<?=$idCde?></caption>
@@ -36,7 +38,7 @@
 				</tr>				
 			<?php endforeach; ?> 
 			<?php
-			$totalTVA = $totalHT * 1.20;
+			$totalTVA = $totalHT/5;
 			$totalTTC = $totalHT + $totalTVA;	
 			?>
 			<tfoot>
