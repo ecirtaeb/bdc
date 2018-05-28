@@ -4,6 +4,7 @@ function getAllOrders() {
 	
 	$db = connexion();
 	$select = "SELECT * FROM orders";
+	//DATE_FORMAT(orderDate,'%d/%m/%Y')
 	$orders = [];
 	$statement = $db->prepare($select);
 	$statement->execute();
@@ -47,4 +48,9 @@ function getproductById($id) {
 	$productName = $statement->fetch(\PDO::FETCH_ASSOC);
 	
 	return $productName;
+}
+
+function formatNb($nb) {
+	
+	return (number_format ( $nb , $decimals = 2 , $dec_point = "," , $thousands_sep = " " ));
 }

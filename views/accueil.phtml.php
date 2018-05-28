@@ -1,4 +1,8 @@
 <?php include 'head.phtml.php'; ?>
+<script type="text/javascript">
+	var node = document.querySelector("nav a");
+	node.style.display = "none";
+</script>
 	<main class="container">
 		<table id="bdc">		
 			<caption>Liste des commandes</caption>

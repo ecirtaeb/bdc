@@ -11,8 +11,19 @@ html {
 	text-decoration: none;
 }
 
-.clear {
+.upper {
+	text-transform : uppercase;
+}
+
+
+.clearfix::after {
+	content : "";
+	display : block;
 	clear : both;
+}
+
+.relative{
+	position : relative;
 }
 
 .flex {
@@ -22,25 +33,23 @@ html {
 	justify-content : space-between;
 }
 
-.flexInfoClient {
-	display : flex;
-	flex-wrap : wrap;
-	flex-direction : row;
-	justify-content : flex-end;
-}
-
 
 body {
 	color : black;
+	background-color : rgb(226,236,208);
 	font-family : "Open-sans", "serif";
 	font-size : 2rem;
 	margin : 0;
 	text-align: center;
 }
 
-nav {
-	text-align : left;
+ul  {
+	list-style-type : none;
+	background-color : rgb(142,166,166);
+	padding : 1.5rem;
+	border-radius : 1.5rem;
 }
+
 
 caption {
 	color : black;
@@ -60,6 +69,42 @@ table th {
 }
 
 
+
+/***************
+     HEADER
+***************/
+
+header {
+	text-align : left;
+	padding : 5rem;
+}
+
+header nav a {
+	background-color : rgb(142,166,166);
+	color : rgb(226,236,208);
+	padding : 1.5rem;
+	text-decoration : none;
+}
+
+
+/***************
+    ACCUEIL
+***************/
+
+table#bdc {
+	width : 80%;
+	margin : 0 auto;
+	border-collapse : collapse;
+	text-align : center;
+
+}
+
+table a {
+	text-decoration : none;
+	color : black;
+	font-weight : bold;
+}
+
 tbody tr:first-child {
 	background-color: none;
 }
@@ -72,46 +117,74 @@ tbody tr:nth-child(odd) {
 	background-color: #DDD;
 }
 
-
-/***************
-    ACCUEIL
-***************/
-
-table#bdc {
-	width : 80%;
-	margin : 0 auto;
-	border-collapse : collapse;
-
-}
-
-table#bdc td {
-	text-align : left;
-	padding : 5px 5px;
-}
-
 table#bdc tfoot td {
-	text-align : right;
 	padding : 5px 5px;
 	font-height : bold;
 }
 
-
 /*******************
    DETAIL COMMANDE
 *******************/
+
+#infoClient.flex {
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : column;
+	justify-content : space-between;
+	align-items : flex-end; 
+}
+
+
+ul#infoClient {
+	width : 30%;
+}
+
+#infoClient li {
+	width : 100%;
+	text-align : left;
+	line-height : 1.8;
+}
+
+#infoClient li {
+	width : 100%;
+	text-align : left;
+	line-height : 1.8;
+}
+
+
+ul#infoClient li:first-child {
+	font-size : 3rem;
+}
+
+ul#infoClient li:nth-child(2) {
+	font-size : 2.5rem;
+}
 
 .adrClient {
 	width : 30%;
 	text-align : left;
 }
 
-table#bdc {
-	width : 80%;
-	margin : 0 auto;
-	border-collapse : collapse;
-	border : none;
-
-}
-section#infoClient {
+table#bdc tbody#detail tr td {
 	text-align : right;
+	padding-right : 1rem;
 }
+
+table#bdc tbody#detail tr td:first-child {
+	text-align : left;
+	padding-left : 1rem;
+}
+
+
+tbody tr td:first-child {
+	text-align : left;
+	padding-left : 1rem;
+}
+
+/***************
+    FOOTER
+**************/
+footer {
+	height : 10rem;
+}
+
