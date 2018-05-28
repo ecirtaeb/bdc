@@ -1,0 +1,106 @@
+html {
+
+	font-size : 62.5%;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+.a {
+	text-decoration: none;
+}
+
+.clear {
+	clear : both;
+}
+
+.flex {
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : row;
+	justify-content : space-between;
+}
+
+body {
+	color : black;
+	font-family : "Open-sans", "serif";
+	font-size : 2rem;
+	margin : 0;
+	text-align: center;
+}
+
+nav {
+	text-align : left;
+}
+
+caption {
+	color : black;
+	font-size : 3rem;
+	margin-bottom: 2rem;
+
+}
+
+table {
+
+	border : none;
+}
+
+table th {
+
+	padding: 2rem;
+}
+
+
+tbody tr:first-child {
+	background-color: none;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #AAA;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #DDD;
+}
+
+
+
+/***************
+    ACCUEIL
+***************/
+
+table#bdc {
+	width : 80%;
+	margin : 0 auto;
+	border-collapse : collapse;
+
+}
+
+table#bdc td {
+	text-align : left;
+	padding : 5px 5px;
+}
+
+table#bdc tfoot td {
+	text-align : right;
+	padding : 5px 5px;
+	font-height : bold;
+}
+
+
+/*******************
+   DETAIL COMMANDE
+*******************/
+
+table#bdc {
+	width : 80%;
+	margin : 0 auto;
+	border-collapse : collapse;
+	border : none;
+
+}
+section#infoClient {
+	width : 30%;
+	text-align : right;
+}
